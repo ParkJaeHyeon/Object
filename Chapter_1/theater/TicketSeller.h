@@ -12,8 +12,15 @@ public:
 private:
 	TicketOffice _ticketOffice;
 
+
 public:
-	TicketOffice& getTicketOffice();
+//	refac
+//	TicketOffice& getTicketOffice();
+	void sellTo(Audience& audience);
+
+public:
+	long get_amount();
+	size_t get_ticket_count();
 
 } *pTicketSeller;
 

@@ -32,9 +32,25 @@ Bag::hasTicket()
 }
 
 long 
-Bag::getAmount()
+Bag::get_amount()
 {
 	return _amount;
+}
+
+long
+Bag::hold(Ticket ticket)
+{
+	if (hasInvitation())
+	{
+		setTicket(ticket);
+		return 0L;
+	}
+	else
+	{
+		setTicket(ticket);
+		minusAmount(ticket.getFee());
+		return ticket.getFee();
+	}
 }
 
 void
