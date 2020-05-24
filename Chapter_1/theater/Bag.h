@@ -19,6 +19,9 @@ public:
 	bool hasInvitation();
 	bool hasTicket();
 
+	// 관객의 금액 체크를 위한 함수
+	long getAmount();
+
 public:
 	void setTicket(Ticket& ticket);
 	void minusAmount(long amount);

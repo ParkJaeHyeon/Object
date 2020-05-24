@@ -13,7 +13,7 @@ private:
 	TicketOffice _ticketOffice;
 
 public:
-	TicketOffice getTicketOffice();
+	TicketOffice& getTicketOffice();
 
 } *pTicketSeller;
 

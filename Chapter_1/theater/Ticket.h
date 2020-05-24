@@ -3,7 +3,7 @@
 typedef class Ticket
 {
 public:
-	Ticket();
+	Ticket(long fee);
 	virtual ~Ticket();
 
 private:

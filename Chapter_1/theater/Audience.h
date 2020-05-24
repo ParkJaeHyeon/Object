@@ -12,7 +12,7 @@ private:
 	Bag _bag;
 
 public:
-	Bag getBag();
+	Bag& getBag();
 
 } *pAudience;
 

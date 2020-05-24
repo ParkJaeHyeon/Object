@@ -10,7 +10,7 @@ TicketSeller::~TicketSeller()
 }
 
 
-TicketOffice
+TicketOffice&
 TicketSeller::getTicketOffice()
 {
 	return _ticketOffice;

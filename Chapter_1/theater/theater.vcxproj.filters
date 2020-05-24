@@ -25,13 +25,13 @@
     <Filter Include="Audience\Bag\Invitation">
       <UniqueIdentifier>{165cb984-2869-470c-8fbd-7e0a4f8bbe0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Theater\TicketOffice">
-      <UniqueIdentifier>{98e23680-7c95-49cb-8eca-62e7b49b0dfc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Theater\TicketOffice\TicketSeller">
+    <Filter Include="Theater\TicketSeller">
       <UniqueIdentifier>{be7138f1-29d1-4876-83e7-04c3bbd2a757}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Theater\TicketOffice\TicketSeller\Ticket">
+    <Filter Include="Theater\TicketSeller\TicketOffice">
+      <UniqueIdentifier>{98e23680-7c95-49cb-8eca-62e7b49b0dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Theater\Ticket">
       <UniqueIdentifier>{881a1885-f6e9-440c-a1e7-463feb7f014c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -46,7 +46,7 @@
       <Filter>Audience\Bag</Filter>
     </ClCompile>
     <ClCompile Include="Ticket.cpp">
-      <Filter>Theater\TicketOffice\TicketSeller\Ticket</Filter>
+      <Filter>Theater\Ticket</Filter>
     </ClCompile>
     <ClCompile Include="Invitation.cpp">
       <Filter>Audience\Bag\Invitation</Filter>
@@ -55,10 +55,10 @@
       <Filter>Audience</Filter>
     </ClCompile>
     <ClCompile Include="TicketOffice.cpp">
-      <Filter>Theater\TicketOffice</Filter>
+      <Filter>Theater\TicketSeller\TicketOffice</Filter>
     </ClCompile>
     <ClCompile Include="TicketSeller.cpp">
-      <Filter>Theater\TicketOffice\TicketSeller</Filter>
+      <Filter>Theater\TicketSeller</Filter>
     </ClCompile>
     <ClCompile Include="Theater.cpp">
       <Filter>Theater</Filter>
@@ -72,7 +72,7 @@
       <Filter>Audience\Bag</Filter>
     </ClInclude>
     <ClInclude Include="Ticket.h">
-      <Filter>Theater\TicketOffice\TicketSeller\Ticket</Filter>
+      <Filter>Theater\Ticket</Filter>
     </ClInclude>
     <ClInclude Include="Invitation.h">
       <Filter>Audience\Bag\Invitation</Filter>
@@ -81,10 +81,10 @@
       <Filter>Audience</Filter>
     </ClInclude>
     <ClInclude Include="TicketOffice.h">
-      <Filter>Theater\TicketOffice</Filter>
+      <Filter>Theater\TicketSeller\TicketOffice</Filter>
     </ClInclude>
     <ClInclude Include="TicketSeller.h">
-      <Filter>Theater\TicketOffice\TicketSeller</Filter>
+      <Filter>Theater\TicketSeller</Filter>
     </ClInclude>
     <ClInclude Include="Theater.h">
       <Filter>Theater</Filter>

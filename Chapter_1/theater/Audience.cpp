@@ -9,7 +9,7 @@ Audience::~Audience()
 {
 }
 
-Bag
+Bag&
 Audience::getBag()
 {
 	return _bag;

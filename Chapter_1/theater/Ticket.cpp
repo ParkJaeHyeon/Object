@@ -1,6 +1,7 @@
 #include "Ticket.h"
 
-Ticket::Ticket()
+Ticket::Ticket(long fee)
+	:_fee(fee)
 {
 }
 

@@ -14,5 +14,7 @@ private:
 
 public:
 	void enter(Audience& audience);
+	long get_amount();
+	size_t get_ticket_count();
 } *pTheater;
 

@@ -2,7 +2,7 @@
 
 TicketOffice::TicketOffice(
 	long amount,
-	std::list<Ticket>& ticket
+	std::queue<Ticket> ticket
 )
 	: _amount(amount),
 	  _tickets(ticket)
@@ -13,11 +13,11 @@ TicketOffice::~TicketOffice()
 {
 }
 
-Ticket&
+Ticket
 TicketOffice::getTicket()
 {
 	Ticket ticket = _tickets.front();
-	_tickets.pop_front;
+	_tickets.pop();
 	return ticket;
 }
 
@@ -31,4 +31,17 @@ void
 TicketOffice::plusAmount(long amount)
 {
 	_amount += amount;
+}
+
+
+size_t
+TicketOffice::get_ticket_count()
+{
+	return _tickets.size();
+}
+
+long
+TicketOffice::get_amount()
+{
+	return _amount;
 }

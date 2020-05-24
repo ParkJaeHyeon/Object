@@ -3,10 +3,9 @@
 typedef class Invitation
 {
 public:
-	Invitation();
+	Invitation(long long  when);
 	virtual ~Invitation();
 	
 private:
 	long long _when;
 } *pInvitation;
-

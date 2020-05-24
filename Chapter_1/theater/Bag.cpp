@@ -4,12 +4,15 @@
 Bag::Bag(long amount)
 	: _amount(amount)
 {
+	_invitation = nullptr;
+	_ticket = nullptr;
 }
 
 Bag::Bag(Invitation& invitation, long amount)
-	: _invitation(&invitation),
-	  _amount(amount)
+	  : _amount(amount)
 {
+	_invitation = &invitation;
+	_ticket = nullptr;
 }
 
 Bag::~Bag()
@@ -26,6 +29,12 @@ bool
 Bag::hasTicket()
 {
 	return nullptr == _ticket ? false : true;
+}
+
+long 
+Bag::getAmount()
+{
+	return _amount;
 }
 
 void
