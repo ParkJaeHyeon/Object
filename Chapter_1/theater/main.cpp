@@ -74,14 +74,14 @@ int main()
 	{
 		printf("==================================\n");
 		printf("inviation [%d] \n", i);
-		printf("amount: %ld\n", audience_list.at(i).getBag().getAmount());
-		printf(audience_list.at(i).getBag().hasInvitation() ? "invitation: true\n\n" : "invitation: false\n\n");
+		printf("amount: %ld\n", audience_list.at(i).get_amount());
+		printf(audience_list.at(i).has_invitation() ? "invitation: true\n\n" : "invitation: false\n\n");
 		
 		theater.enter(audience_list.at(i));
 		
 		printf("after\n\n");
-		printf("amount: %ld\n", audience_list.at(i).getBag().getAmount());
-		printf(audience_list.at(i).getBag().hasTicket() ? "Ticket: true\n" : "Ticket: false\n");
+		printf("amount: %ld\n", audience_list.at(i).get_amount());
+		printf(audience_list.at(i).has_ticket() ? "Ticket: true\n" : "Ticket: false\n");
 	}
 
 	printf("==================================\n");

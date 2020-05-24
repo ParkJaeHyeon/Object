@@ -33,6 +33,11 @@ TicketOffice::plusAmount(long amount)
 	_amount += amount;
 }
 
+void
+TicketOffice::sellTicketTo(Audience& audience)
+{
+	plusAmount(audience.buy(getTicket()));
+}
 
 size_t
 TicketOffice::get_ticket_count()

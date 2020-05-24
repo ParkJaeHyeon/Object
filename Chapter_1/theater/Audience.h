@@ -12,7 +12,15 @@ private:
 	Bag _bag;
 
 public:
-	Bag& getBag();
+//	refac
+//	Bag& getBag();
+	
+	long buy(Ticket ticket);
+
+public:
+	long get_amount();
+	bool has_invitation();
+	bool has_ticket();
 
 } *pAudience;
 

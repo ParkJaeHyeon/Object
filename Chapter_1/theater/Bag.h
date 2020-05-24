@@ -20,9 +20,17 @@ public:
 	bool hasTicket();
 
 	// 관객의 금액 체크를 위한 함수
-	long getAmount();
+	long get_amount();
 
 public:
+	long hold(Ticket ticket);
+//	refac
+//public:
+//	void setTicket(Ticket& ticket);
+//	void minusAmount(long amount);
+//	void plusAmount(long amount);
+
+private:
 	void setTicket(Ticket& ticket);
 	void minusAmount(long amount);
 	void plusAmount(long amount);
