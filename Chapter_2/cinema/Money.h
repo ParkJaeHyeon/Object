@@ -19,4 +19,7 @@ public:
 	Money times(double percent);
 	bool isLessThen(Money other);
 	bool isGreaterThanOrEqual(Money other);
+
+public:
+	uint64_t fee();
 };

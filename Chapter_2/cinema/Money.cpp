@@ -51,3 +51,9 @@ Money::isGreaterThanOrEqual(Money other)
 {
 	return _amount >= other._amount ? true : false;
 }
+
+uint64_t
+Money::fee()
+{
+	return _amount;
+}

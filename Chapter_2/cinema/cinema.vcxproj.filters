@@ -16,6 +16,12 @@
     <Filter Include="Money">
       <UniqueIdentifier>{438cac88-7ed5-4133-83a5-fb464864b65b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Movie">
+      <UniqueIdentifier>{3bc7a5b6-46bc-4ca1-9f76-57641e093a40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Customer">
+      <UniqueIdentifier>{87060273-964c-4c50-aa9a-22064ad6f30b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,6 +33,12 @@
     <ClCompile Include="Money.cpp">
       <Filter>Money</Filter>
     </ClCompile>
+    <ClCompile Include="Customer.cpp">
+      <Filter>Customer</Filter>
+    </ClCompile>
+    <ClCompile Include="Movie.cpp">
+      <Filter>Movie</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,6 +46,12 @@
     </ClInclude>
     <ClInclude Include="Money.h">
       <Filter>Money</Filter>
+    </ClInclude>
+    <ClInclude Include="Movie.h">
+      <Filter>Movie</Filter>
+    </ClInclude>
+    <ClInclude Include="Customer.h">
+      <Filter>Customer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
