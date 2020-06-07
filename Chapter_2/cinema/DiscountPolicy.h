@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Windows.h>
+
 #include <list>
 #include "Money.h"
 //#include "Movie.h"
@@ -18,6 +20,7 @@ public:
 typedef class DiscountPolicy
 {
 public:
+	DiscountPolicy();
 	DiscountPolicy(std::list<pIDiscountCondition>& conditions);
 	virtual ~DiscountPolicy();
 
@@ -98,3 +101,14 @@ private:
 protected:
 	virtual Money getDiscountAmount(Screening& screening);
 } PercentDiscountPolicy, *pPercentDiscountPolicy;
+
+
+typedef class NoneDiscountPolicy : public DiscountPolicy
+{
+public:
+	NoneDiscountPolicy();
+	virtual ~NoneDiscountPolicy();
+
+protected:
+	virtual Money getDiscountAmount(Screening& screening);
+} NoneDiscountPolicy, *pNoneDiscountPolicy;

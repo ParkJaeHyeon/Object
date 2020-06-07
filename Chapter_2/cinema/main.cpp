@@ -64,7 +64,25 @@ int main()
 	Screening discount_titanic(titanic, 7, see_movie_time);
 	Customer customer_4;
 	Reservation reservation_4 = discount_titanic.reserve(customer_4, 3);
-	printf("Customer_4 예약 가격: %llu원\n", reservation_4.getFee().fee());
+	printf("Customer_4 예약 가격: %llu원\n\n", reservation_4.getFee().fee());
+
+
+	//
+	// 스타워즈 영화 할인 조건
+	// 스타워즈는 할인이 없다.
+	
+	NoneDiscountPolicy starwars_policy;
+
+	Movie starwars(L"스타워즈",
+				   std::chrono::seconds(90),
+				   Money(9000),
+				   &starwars_policy);
+	printf("스타워즈 영상의 가격: %llu원\n\n", starwars.getFee().fee());
+
+	Screening starwars_screening(starwars, 4, see_movie_time);
+	Customer customer_5;
+	Reservation reservation_5 = starwars_screening.reserve(customer_5, 4);
+	printf("Customer_5 예약 가격: %llu원\n\n", reservation_5.getFee().fee());
 
 	return 0;
 }

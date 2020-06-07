@@ -7,6 +7,11 @@
 //
 // DiscountPolicy Class
 //
+DiscountPolicy::DiscountPolicy()
+{
+
+}
+
 DiscountPolicy::DiscountPolicy(std::list<pIDiscountCondition>& conditions)
 	:_conditions(conditions)
 {
@@ -103,6 +108,8 @@ AmountDiscountPolicy::~AmountDiscountPolicy()
 Money
 AmountDiscountPolicy::getDiscountAmount(Screening& screening)
 {
+	
+	UNREFERENCED_PARAMETER(screening);
 	return _discountAmount;
 }
 
@@ -126,3 +133,25 @@ PercentDiscountPolicy::getDiscountAmount(Screening& screening)
 {
 	return screening.getMoiveFee().times(_percent);
 }
+
+
+//
+// NoneDiscountPolicy Class
+//
+NoneDiscountPolicy::NoneDiscountPolicy()
+{
+
+}
+
+NoneDiscountPolicy::~NoneDiscountPolicy()
+{
+
+}
+
+Money
+NoneDiscountPolicy::getDiscountAmount(Screening& screening)
+{
+	UNREFERENCED_PARAMETER(screening);
+	return Money(0);
+}
+
