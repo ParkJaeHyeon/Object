@@ -22,6 +22,9 @@
     <Filter Include="Customer">
       <UniqueIdentifier>{87060273-964c-4c50-aa9a-22064ad6f30b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DiscountPolicy">
+      <UniqueIdentifier>{4417dd6e-ad26-4558-8cef-0c39800e0db0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,6 +42,9 @@
     <ClCompile Include="Movie.cpp">
       <Filter>Movie</Filter>
     </ClCompile>
+    <ClCompile Include="DiscountPolicy.cpp">
+      <Filter>DiscountPolicy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="Customer.h">
       <Filter>Customer</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscountPolicy.h">
+      <Filter>DiscountPolicy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

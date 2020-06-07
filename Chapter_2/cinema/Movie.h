@@ -5,14 +5,16 @@
 
 #include "Money.h"
 #include "Customer.h"
+#include "DiscountPolicy.h"
 
+class DiscountPolicy;
 class Reservation;
 class Screening;
 
 typedef class Movie
 {
 public:
-	Movie(std::wstring title, std::chrono::seconds runningTime, Money fee);
+	Movie(std::wstring title, std::chrono::seconds runningTime, Money fee, pDiscountPolicy discountPolicy);
 
 	virtual ~Movie();
 
@@ -20,6 +22,9 @@ private:
 	std::wstring _title;
 	std::chrono::seconds _runningTime;
 	Money _fee;
+
+	// class에 멤버함수로 virtual pure 함수가 있는 경우에는 포인터를 사용
+	pDiscountPolicy _discountPolicy;
 
 public:
 	Money getFee();
@@ -59,4 +64,7 @@ private:
 	Screening _screening;
 	Money _fee;
 	int audienceCount;
+
+public:
+	Money getFee();
 } Reservation, *pReservation;

@@ -159,6 +159,7 @@ echo "[*] Copy binary to debuggee...Done"</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Customer.cpp" />
+    <ClCompile Include="DiscountPolicy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Movie.cpp" />
@@ -171,6 +172,7 @@ echo "[*] Copy binary to debuggee...Done"</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Customer.h" />
+    <ClInclude Include="DiscountPolicy.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="Movie.h" />
     <ClInclude Include="stdafx.h" />

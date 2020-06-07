@@ -4,8 +4,8 @@
 //
 // Movie Class
 //
-Movie::Movie(std::wstring title, std::chrono::seconds runningTime, Money fee)
-	:_title(title), _runningTime(runningTime), _fee(fee)
+Movie::Movie(std::wstring title, std::chrono::seconds runningTime, Money fee, pDiscountPolicy discountPolicy)
+	:_title(title), _runningTime(runningTime), _fee(fee), _discountPolicy(discountPolicy)
 {
 
 }
@@ -24,7 +24,7 @@ Movie::getFee()
 Money
 Movie::calculateMovieFee(Screening& screening)
 {
-	return _fee.minus(0);
+	return _fee.minus(_discountPolicy->calculateDiscountAmount(screening));
 }
 
 
@@ -84,4 +84,10 @@ Reservation::Reservation(Customer customer, Screening& screening, Money fee, int
 Reservation::~Reservation()
 {
 
+}
+
+Money
+Reservation::getFee()
+{
+	return Money(_fee);
 }
