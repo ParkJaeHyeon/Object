@@ -39,6 +39,11 @@ Movie::calculateMovieFee(Screening& screening)
 	return _fee.minus(_discountPolicy->calculateDiscountAmount(screening));
 }
 
+void
+Movie::changeDiscountPolicy(pDiscountPolicy discountPolicy)
+{
+	_discountPolicy = discountPolicy;
+}
 
 //
 // Screening Class

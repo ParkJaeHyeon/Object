@@ -8,7 +8,7 @@
 
 class Screening;
 
-// 추상클래스
+// 인터페이스
 typedef class IDiscountCondition
 {
 public:
@@ -16,7 +16,7 @@ public:
 	virtual ~IDiscountCondition() {};
 } IDiscountCondition, *pIDiscountCondition;
 
-
+// 추상클래스
 typedef class DiscountPolicy
 {
 public:

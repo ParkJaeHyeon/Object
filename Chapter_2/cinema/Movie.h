@@ -29,6 +29,7 @@ private:
 public:
 	Money getFee();
 	Money calculateMovieFee(Screening& screennig);
+	void changeDiscountPolicy(pDiscountPolicy discountPolicy);
 } Moive, *pMoive;
 
 

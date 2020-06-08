@@ -84,5 +84,18 @@ int main()
 	Reservation reservation_5 = starwars_screening.reserve(customer_5, 4);
 	printf("Customer_5 예약 가격: %llu원\n\n", reservation_5.getFee().fee());
 
+	//
+	// 아바타 영화의 할인 정책을 변경
+	// 할인 조건은 동일
+	PercentDiscountPolicy avatar_policy_percent(0.2, avata_condition);
+	avatar.changeDiscountPolicy(&avatar_policy_percent);
+
+	printf("아바타 영상의 가격: %llu원\n\n", avatar.getFee().fee());
+
+	// 변경된 할인 정책 적용
+	Screening change_discount_avatar(avatar, 2, see_movie_time);
+	Customer customer_6;
+	Reservation reservation_6 = change_discount_avatar.reserve(customer_1, 2);
+	printf("Customer_6 예약 가격: %llu원\n", reservation_6.getFee().fee());
 	return 0;
 }
